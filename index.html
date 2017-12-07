@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Yonge &amp; Bloor Periodontics</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//themes.googleusercontent.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> 
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Modernizr -->
+    <script src="js/lib/modernizr.js"></script>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header class="header">
+		<h1 class="header__title">YONGE &amp; BLOOR PERIODONTICS</h1>
+
+		<div class="header__content">
+			<form action="" class="search">
+				<button type="submit" class="btn-flat">
+					<i class="fa fa-search"></i>
+				</button>
+				<input type="search" value="" class="form-control">
+			</form>
+
+			<div class="dropdown header__profile">
+				<button class="btn btn-flat" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fa fa-user"></i>
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- / HEADER -->
+
+
+	<main class="main">
+		<!-- SIDENAV -->
+		<div class="sidenav-wrap">
+			<!-- Sidenav trigger -->
+			<button type="button" class="sidenav-trigger">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-arrow-left"></i>
+			</button>
+			<!-- / Sidenav trigger -->
+
+			<ul class="sidenav">
+				<li><a href="create-new-case-step-1.html">
+					<span class="sidenav__icon"><i class="fa fa-file-text-o"></i></span>
+					<span class="sidenav__link">Create New Case</span>
+				</a></li>
+				<li class="active"><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-dashboard"></i></span>
+					<span class="sidenav__link">Dashboard</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-map-o"></i></span>
+					<span class="sidenav__link">My Workflow</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-list-alt"></i></span>
+					<span class="sidenav__link">Templates</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon">
+						<svg role="img" class="icon icon-implant"><use xlink:href="icons/icons.svg#icon-implant"></use></svg>
+					</span>
+					<span class="sidenav__link">Implants</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-users"></i></span>
+					<span class="sidenav__link">My Referrals</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-line-chart"></i></span>
+					<span class="sidenav__link">My Analytics</span>
+				</a></li>
+			</ul>
+		</div>
+		<!-- / SIDENAV -->
+
+
+		<div class="content">
+			<div class="badges-wrap">
+				<button class="badge active btn btn-danger" type="button">
+					<span class="badge__icon">
+						<i class="fa fa-exclamation-triangle"></i>
+					</span>
+					<dl class="badge__content">
+						<dd>32</dd>
+						<dt>Unread Reports Requiring Action</dt>
+					</dl>
+				</button>
+
+				<button class="badge active btn btn-warning" type="button">
+					<span class="badge__icon">
+						<i class="fa fa-comments-o"></i>
+					</span>
+					<dl class="badge__content">
+						<dd>11</dd>
+						<dt>Reports Waiting on Dr Notes</dt>
+					</dl>
+				</button>
+
+				<button class="badge active btn btn-success" type="button">
+					<span class="badge__icon">
+						<i class="fa fa-file-text-o"></i>
+					</span>
+					<dl class="badge__content">
+						<dd>5</dd>
+						<dt>Reports Ready to be Sent</dt>
+					</dl>
+				</button>
+			</div>
+
+			<dl class="filters">
+				<dt>Show only:</dt>
+				<dd class="filters__select">
+					<select class="select select-icons">
+				        <option value="all" data-icon="fa-align-justify">
+				        	All Reports
+				        </option>
+				        <option value="2" data-icon="fa-exclamation-triangle">
+				        	Nonreceipt - Sent 7+ Days Ago
+				        </option>
+				        <option value="5" data-icon="fa-flag-o">
+				        	Awaiting Dr. Clinical Summary
+				        </option>
+				        <option value="7" data-icon="fa-file-text-o">
+				        	Ready to be Sent
+				        </option>
+				        <option value="1" data-icon="fa-hourglass-start">
+				        	Recently Sent to Referral
+				        </option>
+				        <option value="3" data-icon="fa-check-circle-o">
+				        	Confirmed Receipt
+				        </option>
+				        <option value="4" data-icon="fa-edit">
+				        	Report Incomplete
+				        </option>
+				        <option value="6" data-icon="fa-paper-plane-o">
+				        	In Prosthetic Review with Lab
+				        </option>
+				    </select>
+				</dd>
+			</dl>
+			
+			<!--<div class="table-responsive spaced5x">-->
+				<table id="DataTablesDesign" class="table table--action dt-responsive nowrap" cellspacing="0" cellpadding="0" width="100%">
+					<thead>
+						<tr>
+                            <th data-priority="7">&nbsp;</th>
+							<th data-priority="1"><a href="#!">Date Created</a></th>
+							<th data-priority="2"><a href="#!">Patient</a></th>
+							<th data-priority="3"><a href="#!">Report Type</a></th>
+							<th data-priority="4"><a href="#!">Referring Doctor</a></th>
+							<th data-priority="5"><a href="#!">Status</a></th>
+							<th data-priority="6">
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="tr-spacing">
+							<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+						</tr>
+
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check01" class="checkbox checkbox--empty">
+								<label for="td-check01"></label>
+							</td>
+							<td>03-29-2017</td>
+							<td>Violet Simon</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-check-circle-o text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check02" class="checkbox checkbox--empty">
+								<label for="td-check02"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-check-circle-o text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check03" class="checkbox checkbox--empty">
+								<label for="td-check03"></label>
+							</td>
+							<td>03-29-2017</td>
+							<td>Violet Simon</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-check-circle-o text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check04" class="checkbox checkbox--empty">
+								<label for="td-check04"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-hourglass-start text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check05" class="checkbox checkbox--empty">
+								<label for="td-check05"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-hourglass-start text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check06" class="checkbox checkbox--empty">
+								<label for="td-check06"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-exclamation-triangle text-danger"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check07" class="checkbox checkbox--empty">
+								<label for="td-check07"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-check-circle-o text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check08" class="checkbox checkbox--empty">
+								<label for="td-check08"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-check-circle-o text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check09" class="checkbox checkbox--empty">
+								<label for="td-check09"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-check-circle-o text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="td-check10" class="checkbox checkbox--empty">
+								<label for="td-check10"></label>
+							</td>
+							<td>02-09-2017</td>
+							<td>Bradley Walker</td>
+							<td>Consult</td>
+							<td>Dr. Bruce Butler</td>
+							<td>
+								<i class="fa fa-hourglass-start text-success"></i>
+							</td>
+							<td>
+								<div class="table__actions">
+									<button type="button" class="btn-flat">
+										<i class="fa fa-download"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-envelope-o"></i>
+									</button>
+									<button type="button" class="btn-flat">
+										<i class="fa fa-exchange"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			<!--</div>-->
+
+			<ul class="pagination">
+				<li class="page-item"><a class="page-link" href="#">
+					<i class="fa fa-angle-double-left"></i>
+				</a></li>
+				<li class="page-item"><a class="page-link" href="#">
+					<i class="fa fa-angle-left"></i>
+				</a></li>
+				<li class="page-item page-item--nbr"><a class="page-link" href="#">1</a></li>
+				<li class="page-item page-item--nbr active"><a class="page-link" href="#">2</a></li>
+				<li class="page-item page-item--nbr"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">
+					<i class="fa fa-angle-right"></i>
+				</a></li>
+				<li class="page-item"><a class="page-link" href="#">
+					<i class="fa fa-angle-double-right"></i>
+				</a></li>
+			</ul>
+		</div>
+	</main>
+	  
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="js/lib/svg4everybody.min.js"></script>
+
+	<script src="js/bootstrap/modal.js"></script>
+	<script src="js/bootstrap/dropdown.js"></script>
+	<script src="js/bootstrap/util.js"></script>
+
+	<script src="js/plugins/select2.min.js"></script>
+
+	<script src="js/init.js"></script>
+
+	<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap4.min.js"></script>
+
+</body>
+</html>

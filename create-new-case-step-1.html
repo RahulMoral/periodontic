@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Yonge &amp; Bloor Periodontics</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//themes.googleusercontent.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> 
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Modernizr -->
+    <script src="js/lib/modernizr.js"></script>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header class="header">
+		<h1 class="header__title">YONGE &amp; BLOOR PERIODONTICS</h1>
+
+		<div class="header__content">
+			<form action="" class="search">
+				<button type="submit" class="btn-flat">
+					<i class="fa fa-search"></i>
+				</button>
+				<input type="search" value="" class="form-control">
+			</form>
+
+			<div class="dropdown header__profile">
+				<button class="btn btn-flat" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fa fa-user"></i>
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- / HEADER -->
+
+
+	<main class="main">
+		<!-- SIDENAV -->
+		<div class="sidenav-wrap">
+			<!-- Sidenav trigger -->
+			<button type="button" class="sidenav-trigger">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-arrow-left"></i>
+			</button>
+			<!-- / Sidenav trigger -->
+
+			<ul class="sidenav">
+				<li class="active"><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-file-text-o"></i></span>
+					<span class="sidenav__link">Create New Case</span>
+				</a></li>
+				<li><a href="dashboard.html">
+					<span class="sidenav__icon"><i class="fa fa-dashboard"></i></span>
+					<span class="sidenav__link">Dashboard</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-map-o"></i></span>
+					<span class="sidenav__link">My Workflow</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-list-alt"></i></span>
+					<span class="sidenav__link">Templates</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon">
+						<svg role="img" class="icon icon-implant"><use xlink:href="icons/icons.svg#icon-implant"></use></svg>
+					</span>
+					<span class="sidenav__link">Implants</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-users"></i></span>
+					<span class="sidenav__link">My Referrals</span>
+				</a></li>
+				<li><a href="#!">
+					<span class="sidenav__icon"><i class="fa fa-line-chart"></i></span>
+					<span class="sidenav__link">My Analytics</span>
+				</a></li>
+			</ul>
+		</div>
+		<!-- / SIDENAV -->
+
+		<!-- CONTENT WRAPPER -->
+		<div class="content-wrapper">
+			<div class="content">
+				<h2 class="color-primary">Create New Case</h2>
+				<!-- STEPS -->
+				<div class="steps">
+
+					<div class="step step-one active">
+						<div class="step-circle">
+							<span>1</span>
+						</div>
+						<h3 class="color-primary">Basic Information</h3>
+						<form>
+							<div class="row">
+								<div class="col-sm-6 col-12">
+
+									<p class="color-primary">Referring doctor</p>
+									<div class="select-doctor">
+										<div class="form-group mb-group">
+										    <input type="text" id="search-doctor" class="form-control">
+										    <label for="search-doctor">Search Doctor by Last Name</label>
+										    <a href="#" data-toggle="modal" data-target="#add-doctor" class="btn btn-secondary">Add Doctor</a>
+										    <!-- Insert your doctor suggestions loop inside this <ul> list. This field changes it's height dynamic depending how much records are there. If records are more than 5, then a scroller appears.  -->
+										    <div class="suggestions">
+										    	<ul>
+										    		<li><a href="#">Johnson, P.</a><span>12200 Mississauga Chester Rd Ste 100. Mississauga</span></li>
+										    		<li><a href="#">Johnson, Z.</a><span>12200 Mississauga Chester Rd Ste 100. Mississauga</span></li>
+										    		<li><a href="#">Johnson, K.</a><span>12200 Mississauga Chester Rd Ste 100. Mississauga</span></li>
+										    		<li><a href="#">Johnson, C.</a><span>12200 Mississauga Chester Rd Ste 100. Mississauga</span></li>
+										    		<li><a href="#">Johnson, F.</a><span>12200 Mississauga Chester Rd Ste 100. Mississauga</span></li>
+										    	</ul>
+										    </div>
+										</div>
+									</div>
+									<div class="selected-doctor">
+										<h4 class="mb-5">Dr Z. Johnson</h4>
+										<h4>Smile Dental Practice Name</h4>
+										<ul class="list-unstyled">
+											<li>4531 Parking Rd.</li>
+											<li>Toronto, ON</li>
+											<li>M47 J1L</li>
+											<li><a href="tel:4162222344">416 222 2344</a><br>
+											<a href="mailto:email@emailaddress.com">email@emailaddress.com</a></li>
+										</ul>
+										<!-- 
+											In the above containers <h4> and <ul>, the data is static now and you need to fill them with dynamic data depending from the selection
+										-->
+
+										<div class="change">
+											<a href="#" data-toggle="modal" data-target="#edit-doctor" class="btn btn-secondary">edit</a>
+											<a href="#" class="remove-doctor"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-12">
+									<p class="color-primary">Patient information</p>
+									<div class="form-group mb-group">
+									    <input type="text" id="name" class="form-control">
+									    <label for="name">First Name</label>
+									</div>
+									<div class="form-group mb-group">
+									    <input type="text" id="last-name" class="form-control">
+									    <label for="last-name">Last Name</label>
+									</div>
+									<div class="form-group mb-group">
+									    <input type="email" id="email" class="form-control">
+									    <label for="email">Email</label>
+									</div>
+									<div class="text-right">
+										<a href="#" class="btn btn-secondary">Cancel</a>
+										<a href="#" class="btn btn-primary">Next</a>
+									</div>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+					<div class="step">
+						<div class="step-circle">
+							<span>2</span>
+						</div>
+						<h3 class="color-primary">Condition</h3>
+					</div>
+					<div class="step">
+						<div class="step-circle">
+							<span>3</span>
+						</div>
+						<h3 class="color-primary">Final-step</h3>
+					</div>
+				</div>
+				<!-- / STEPS -->
+			</div>
+		</div>
+		<!-- / SIDENAV -->
+	</main>
+
+	<!-- MODALS -->
+
+	<div id="add-doctor" class="modal fade" role="dialog">
+	  	<div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+			    <div class="modal-header">
+		        	<h3 class="color-primary">Add New Doctor</h3>
+			    </div>
+			    <div class="modal-body">
+			      	<form>
+						<div class="form-group mb-group">
+						    <input type="text" id="add-name" class="form-control">
+						    <label for="add-name">First Name</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="text" id="add-last-name" class="form-control">
+						    <label for="add-last-name">Last Name</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="text" id="add-practice-name" class="form-control">
+						    <label for="add-practice-name">Practice Name</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="text" id="address" class="form-control">
+						    <label for="address">Address Line 1</label>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group mb-group mb-select">
+									<select id="add-province">
+										<option>Choose</option>
+										<option>Province 2</option>
+										<option>Province 3</option>
+									</select>
+									<label for="add-province">Province</label>
+								</div>	
+							</div>
+							<div class="col-md-6">
+							<div class="form-group mb-group">
+							    <input type="num" id="add-postal" class="form-control">
+							    <label for="add-postal">Postal Code</label>
+							</div>
+							</div>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="tel" id="add-tel" class="form-control">
+						    <label for="add-tel">Phone Number</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="email" id="add-email" class="form-control">
+						    <label for="add-email">Email</label>
+						</div>
+						<div class="text-right">
+							<a href="#" data-dismiss="modal" class="btn btn-secondary">Cancel</a>
+							<a href="#" class="btn btn-primary">Next</a>
+						</div>
+			      	<form>
+			    </div>
+		    </div>
+
+	  	</div>
+	</div><!-- /#add-doctor -->
+
+	<div id="edit-doctor" class="modal fade" role="dialog">
+	  	<div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+			    <div class="modal-header">
+		        	<h3 class="color-primary">Update Doctor Information</h3>
+			    </div>
+			    <div class="modal-body">
+			      	<form>
+						<div class="form-group mb-group">
+						    <input type="text" id="edit-name" class="form-control">
+						    <label for="edit-name">First Name</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="text" id="edit-last-name" class="form-control">
+						    <label for="edit-last-name">Last Name</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="text" id="edit-practice-name" class="form-control">
+						    <label for="edit-practice-name">Practice Name</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="text" id="edit-address" class="form-control">
+						    <label for="edit-address">Address Line 1</label>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group mb-group mb-select">
+									<select id="edit-province">
+										<option>Choose</option>
+										<option>Province 2</option>
+										<option>Province 3</option>
+									</select>
+									<label for="edit-province">Province</label>
+								</div>	
+							</div>
+							<div class="col-md-6">
+							<div class="form-group mb-group">
+							    <input type="num" id="edit-postal" class="form-control">
+							    <label for="edit-postal">Postal Code</label>
+							</div>
+							</div>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="tel" id="edit-tel" class="form-control">
+						    <label for="edit-tel">Phone Number</label>
+						</div>
+						<div class="form-group mb-group">
+						    <input type="email" id="edit-email" class="form-control">
+						    <label for="edit-email">Email</label>
+						</div>
+						<div class="text-right">
+							<a href="#" data-dismiss="modal" class="btn btn-secondary">Cancel</a>
+							<a href="#" class="btn btn-primary">Update</a>
+						</div>
+			      	<form>
+			    </div>
+		    </div>
+
+	  	</div>
+	</div><!-- /#edit-doctor -->
+
+	<!-- END MODALS -->
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="js/lib/svg4everybody.min.js"></script>
+
+	<script src="js/bootstrap/modal.js"></script>
+	<script src="js/bootstrap/dropdown.js"></script>
+	<script src="js/bootstrap/util.js"></script>
+
+	<script src="js/plugins/select2.min.js"></script>
+
+	<script src="js/init.js"></script>
+
+</body>
+</html>

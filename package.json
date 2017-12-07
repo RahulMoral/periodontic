@@ -1,0 +1,35 @@
+{
+  "name": "periodontic",
+  "version": "1.0.0",
+  "description": "Fix DataTables",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/rahul_moral/periodontic.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.1",
+    "bootstrap": "^4.0.0-alpha.6",
+    "gulp": "^3.9.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "Bootstrap@4",
+    "SCSS",
+    "DataTables"
+  ],
+  "author": "Rahul Moral",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/rahul_moral/periodontic#readme",
+  "directories": {
+    "doc": "docs"
+  }
+}
